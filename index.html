@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Energy in India</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <i class="fas fa-sun"></i>
+        <span>SolarIndia</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#india" class="nav-link">India</a></li>
+        <li><a href="#pros-cons" class="nav-link">Pros & Cons</a></li>
+        <li><a href="#applications" class="nav-link">Applications</a></li>
+        <li><a href="#calculator" class="nav-link">Calculator</a></li>
+        <li><a href="#future" class="nav-link">Future</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- Hamburger Menu -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HOME / HERO ========== -->
+  <section class="hero" id="home">
+    <!-- Animated sunrays background -->
+    <div class="hero-bg">
+      <div class="ray ray1"></div>
+      <div class="ray ray2"></div>
+      <div class="ray ray3"></div>
+      <div class="ray ray4"></div>
+      <div class="ray ray5"></div>
+    </div>
+
+    <div class="hero-content reveal">
+      <span class="hero-tag"><i class="fas fa-leaf"></i> Clean &amp; Renewable</span>
+      <h1 class="hero-title">
+        Powering India<br />
+        <span class="gradient-text">With Sunlight</span>
+      </h1>
+      <p class="hero-sub">
+        India receives over <strong>5,000 trillion kWh</strong> of solar energy annually —
+        enough to power the world. Discover how the nation is harnessing the sun
+        to build a sustainable future.
+      </p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">Explore Now <i class="fas fa-arrow-down"></i></a>
+        <a href="#calculator" class="btn btn-outline">Try Calculator <i class="fas fa-calculator"></i></a>
+      </div>
+
+      <!-- Hero stats -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-num" data-target="500">0</span><span>GW</span>
+          <p>2030 Target</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="73">0</span><span>GW+</span>
+          <p>Installed Capacity</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="300">0</span><span>+</span>
+          <p>Sunny Days/Year</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative sun orb -->
+    <div class="sun-orb"></div>
+  </section>
+
+  <!-- ========== ABOUT SOLAR ENERGY ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Science</span>
+        <h2>About Solar Energy</h2>
+        <p>Understanding the most abundant energy source on Earth</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- What is solar energy -->
+        <div class="about-card reveal">
+          <div class="about-icon"><i class="fas fa-sun"></i></div>
+          <h3>What is Solar Energy?</h3>
+          <p>
+            Solar energy is radiant light and heat from the Sun that is harnessed using
+            photovoltaic cells, solar thermal collectors, or concentrated solar power
+            systems. It is an infinitely renewable resource — the Sun delivers more energy
+            to Earth in one hour than humanity consumes in an entire year.
+          </p>
+          <p>
+            Unlike fossil fuels, solar power produces zero carbon emissions during
+            operation, making it a cornerstone of India's clean energy transition.
+          </p>
+        </div>
+
+        <!-- How solar panels work -->
+        <div class="about-card reveal">
+          <div class="about-icon"><i class="fas fa-bolt"></i></div>
+          <h3>How Solar Panels Work</h3>
+          <p>
+            Solar panels use the <strong>photovoltaic effect</strong>. When photons from
+            sunlight strike silicon cells, they knock electrons loose, creating an electric
+            current. This Direct Current (DC) is converted to Alternating Current (AC)
+            by an inverter for home or grid use.
+          </p>
+          <p>
+            Multiple panels form an <strong>array</strong>, and multiple arrays form a
+            solar farm. Excess electricity can be stored in batteries or fed back to
+            the grid through net metering.
+          </p>
+        </div>
+      </div>
+
+      <!-- Solar Panel Diagram / Visual -->
+      <div class="diagram-section reveal">
+        <h3 class="diagram-title">How a Solar System Works</h3>
+        <div class="diagram">
+          <div class="diagram-step">
+            <div class="d-icon sun-icon"><i class="fas fa-sun"></i></div>
+            <div class="d-label">Sunlight</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="diagram-step">
+            <div class="d-icon panel-icon"><i class="fas fa-solar-panel"></i></div>
+            <div class="d-label">Solar Panel</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="diagram-step">
+            <div class="d-icon inv-icon"><i class="fas fa-plug"></i></div>
+            <div class="d-label">Inverter</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="diagram-step">
+            <div class="d-icon home-icon"><i class="fas fa-home"></i></div>
+            <div class="d-label">Home / Grid</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="diagram-step">
+            <div class="d-icon bat-icon"><i class="fas fa-battery-full"></i></div>
+            <div class="d-label">Battery Storage</div>
+          </div>
+        </div>
+        <p class="diagram-note">
+          <i class="fas fa-info-circle"></i>
+          Excess energy is either stored in batteries or exported to the grid via net metering.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOLAR IN INDIA ========== -->
+  <section class="section section-dark" id="india">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Nation</span>
+        <h2>Solar Energy in India</h2>
+        <p>India's incredible journey towards solar leadership</p>
+      </div>
+
+      <!-- Status cards -->
+      <div class="status-grid reveal">
+        <div class="status-card">
+          <i class="fas fa-flag"></i>
+          <h4>Current Status</h4>
+          <p>
+            India ranks <strong>4th globally</strong> in solar power capacity. As of 2024,
+            the country has surpassed <strong>73 GW</strong> of installed solar capacity,
+            with projects across all 28 states.
+          </p>
+        </div>
+        <div class="status-card">
+          <i class="fas fa-landmark"></i>
+          <h4>Government Initiatives</h4>
+          <ul>
+            <li><i class="fas fa-check"></i> National Solar Mission (NSM)</li>
+            <li><i class="fas fa-check"></i> PM Kusum Scheme (Agriculture)</li>
+            <li><i class="fas fa-check"></i> Rooftop Solar Programme</li>
+            <li><i class="fas fa-check"></i> Solar Parks (Ultra Mega)</li>
+            <li><i class="fas fa-check"></i> International Solar Alliance</li>
+          </ul>
+        </div>
+        <div class="status-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Major Solar Parks</h4>
+          <ul>
+            <li><i class="fas fa-map-pin"></i> Bhadla, Rajasthan – 2,245 MW</li>
+            <li><i class="fas fa-map-pin"></i> Pavagada, Karnataka – 2,050 MW</li>
+            <li><i class="fas fa-map-pin"></i> Kurnool, Andhra Pradesh – 1,000 MW</li>
+            <li><i class="fas fa-map-pin"></i> Rewa, Madhya Pradesh – 750 MW</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Chart Section -->
+      <div class="chart-section reveal">
+        <h3>India's Solar Growth (GW Installed Capacity)</h3>
+        <div class="chart-wrapper">
+          <canvas id="solarGrowthChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Second chart: State wise -->
+      <div class="chart-section reveal">
+        <h3>Top 5 States by Solar Capacity (GW)</h3>
+        <div class="chart-wrapper">
+          <canvas id="stateChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ADVANTAGES & DISADVANTAGES ========== -->
+  <section class="section" id="pros-cons">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Analysis</span>
+        <h2>Advantages &amp; Disadvantages</h2>
+        <p>A balanced look at solar energy</p>
+      </div>
+
+      <div class="pros-cons-grid">
+        <!-- Advantages -->
+        <div class="pros-col reveal">
+          <div class="col-header pros-header">
+            <i class="fas fa-thumbs-up"></i>
+            <h3>Advantages</h3>
+          </div>
+          <div class="card-list">
+            <div class="feature-card pros">
+              <i class="fas fa-leaf"></i>
+              <div>
+                <h4>Zero Emissions</h4>
+                <p>Produces no greenhouse gases during operation, fighting climate change.</p>
+              </div>
+            </div>
+            <div class="feature-card pros">
+              <i class="fas fa-infinity"></i>
+              <div>
+                <h4>Renewable &amp; Infinite</h4>
+                <p>Sunlight is free and will last for another 5 billion years.</p>
+              </div>
+            </div>
+            <div class="feature-card pros">
+              <i class="fas fa-rupee-sign"></i>
+              <div>
+                <h4>Low Operating Cost</h4>
+                <p>After installation, fuel cost is zero — only minimal maintenance required.</p>
+              </div>
+            </div>
+            <div class="feature-card pros">
+              <i class="fas fa-network-wired"></i>
+              <div>
+                <h4>Energy Independence</h4>
+                <p>Reduces reliance on costly coal and oil imports.</p>
+              </div>
+            </div>
+            <div class="feature-card pros">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <h4>Job Creation</h4>
+                <p>Solar sector has created over 1 million jobs in India.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disadvantages -->
+        <div class="cons-col reveal">
+          <div class="col-header cons-header">
+            <i class="fas fa-thumbs-down"></i>
+            <h3>Disadvantages</h3>
+          </div>
+          <div class="card-list">
+            <div class="feature-card cons">
+              <i class="fas fa-cloud"></i>
+              <div>
+                <h4>Weather Dependent</h4>
+                <p>Output drops on cloudy or rainy days, requiring backup or storage.</p>
+              </div>
+            </div>
+            <div class="feature-card cons">
+              <i class="fas fa-tools"></i>
+              <div>
+                <h4>High Initial Cost</h4>
+                <p>Installation of panels and inverters requires significant upfront investment.</p>
+              </div>
+            </div>
+            <div class="feature-card cons">
+              <i class="fas fa-expand-arrows-alt"></i>
+              <div>
+                <h4>Large Space Needed</h4>
+                <p>Utility-scale solar farms require vast land areas.</p>
+              </div>
+            </div>
+            <div class="feature-card cons">
+              <i class="fas fa-battery-quarter"></i>
+              <div>
+                <h4>Storage Challenges</h4>
+                <p>Battery storage is still expensive, limiting 24/7 solar supply.</p>
+              </div>
+            </div>
+            <div class="feature-card cons">
+              <i class="fas fa-recycle"></i>
+              <div>
+                <h4>Panel Disposal</h4>
+                <p>Aging panels (after 25 yrs) create electronic waste challenges.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== APPLICATIONS ========== -->
+  <section class="section section-dark" id="applications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Use Cases</span>
+        <h2>Applications of Solar Energy</h2>
+        <p>From rooftops to fields — solar powers every sector of India</p>
+      </div>
+
+      <div class="app-grid">
+        <div class="app-card reveal">
+          <div class="app-img residential">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="app-body">
+            <h3>Residential</h3>
+            <p>Rooftop solar panels power homes, reduce electricity bills by 70–90%, and earn credits through net metering. The PM Surya Ghar scheme offers subsidies to 10 million households.</p>
+            <div class="app-tags">
+              <span>Rooftop PV</span>
+              <span>Net Metering</span>
+              <span>Solar Water Heater</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card reveal">
+          <div class="app-img industrial">
+            <i class="fas fa-industry"></i>
+          </div>
+          <div class="app-body">
+            <h3>Industrial</h3>
+            <p>Factories and warehouses use large solar arrays to cut energy costs. Companies like Tata, Reliance and ONGC have deployed captive solar plants across India.</p>
+            <div class="app-tags">
+              <span>Captive Plants</span>
+              <span>Solar Parks</span>
+              <span>Green Manufacturing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card reveal">
+          <div class="app-img agriculture">
+            <i class="fas fa-tractor"></i>
+          </div>
+          <div class="app-body">
+            <h3>Agriculture</h3>
+            <p>Solar-powered irrigation pumps replace diesel pumps, saving farmers thousands per year. PM-KUSUM targets installation of 3.5 million solar pumps by 2026.</p>
+            <div class="app-tags">
+              <span>Solar Pumps</span>
+              <span>Cold Storage</span>
+              <span>Agrivoltaics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-card reveal">
+          <div class="app-img transport">
+            <i class="fas fa-bus"></i>
+          </div>
+          <div class="app-body">
+            <h3>Transport &amp; EVs</h3>
+            <p>Solar charging stations power electric vehicles across highways. India plans to solarize all railway stations and power Vande Bharat trains with renewable energy.</p>
+            <div class="app-tags">
+              <span>EV Charging</span>
+              <span>Solar Railways</span>
+              <span>Solar Boats</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COST & SAVINGS CALCULATOR ========== -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Interactive Tool</span>
+        <h2>Solar Savings Calculator</h2>
+        <p>Estimate how much you could save by switching to solar energy</p>
+      </div>
+
+      <div class="calc-wrapper reveal">
+        <div class="calc-form">
+          <h3><i class="fas fa-sliders-h"></i> Enter Your Details</h3>
+
+          <div class="form-group">
+            <label for="monthlyBill">Monthly Electricity Bill (₹)</label>
+            <div class="input-wrap">
+              <i class="fas fa-rupee-sign"></i>
+              <input type="number" id="monthlyBill" placeholder="e.g. 3000" min="100" max="100000" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="roofArea">Available Roof Area (sq ft)</label>
+            <div class="input-wrap">
+              <i class="fas fa-ruler-combined"></i>
+              <input type="number" id="roofArea" placeholder="e.g. 500" min="50" max="10000" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sunHours">Average Sun Hours Per Day</label>
+            <div class="range-wrap">
+              <input type="range" id="sunHours" min="3" max="8" value="5" step="0.5" />
+              <span id="sunHoursVal">5.0 hrs</span>
+            </div>
+            <small>India average: 5–6 hrs. Rajasthan gets up to 7.5 hrs.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="tariff">Electricity Tariff (₹/kWh)</label>
+            <div class="input-wrap">
+              <i class="fas fa-bolt"></i>
+              <input type="number" id="tariff" placeholder="e.g. 6" min="1" max="20" value="6" />
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-full" id="calcBtn" onclick="calculateSavings()">
+            <i class="fas fa-calculator"></i> Calculate Savings
+          </button>
+        </div>
+
+        <!-- Results Panel -->
+        <div class="calc-results" id="calcResults">
+          <div class="results-placeholder" id="resultsPlaceholder">
+            <i class="fas fa-sun fa-3x"></i>
+            <p>Enter your details and click <strong>Calculate Savings</strong> to see your solar potential!</p>
+          </div>
+
+          <div class="results-data" id="resultsData" style="display:none;">
+            <h3><i class="fas fa-chart-line"></i> Your Solar Report</h3>
+
+            <div class="result-item">
+              <span><i class="fas fa-solar-panel"></i> Recommended System Size</span>
+              <strong id="systemSize">—</strong>
+            </div>
+            <div class="result-item highlight">
+              <span><i class="fas fa-piggy-bank"></i> Monthly Savings</span>
+              <strong id="monthlySavings">—</strong>
+            </div>
+            <div class="result-item highlight">
+              <span><i class="fas fa-calendar-check"></i> Annual Savings</span>
+              <strong id="annualSavings">—</strong>
+            </div>
+            <div class="result-item">
+              <span><i class="fas fa-rupee-sign"></i> Estimated System Cost</span>
+              <strong id="systemCost">—</strong>
+            </div>
+            <div class="result-item">
+              <span><i class="fas fa-clock"></i> Payback Period</span>
+              <strong id="payback">—</strong>
+            </div>
+            <div class="result-item">
+              <span><i class="fas fa-leaf"></i> CO₂ Saved per Year</span>
+              <strong id="co2Saved">—</strong>
+            </div>
+
+            <div class="savings-bar-wrap">
+              <p>Solar covers <span id="solarPercent">0</span>% of your electricity needs</p>
+              <div class="savings-bar">
+                <div class="savings-fill" id="savingsFill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FUTURE SCOPE ========== -->
+  <section class="section section-dark" id="future">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What's Next</span>
+        <h2>Future of Solar Energy in India</h2>
+        <p>A bright roadmap to 2030 and beyond</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h4>PM Surya Ghar</h4>
+            <p>Free electricity for 10 million households via rooftop solar subsidies — one of the world's largest rooftop programmes.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2026</span>
+            <h4>Green Hydrogen Mission</h4>
+            <p>Solar-powered electrolysers will produce green hydrogen, enabling clean fuel for industries and heavy transport.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2027</span>
+            <h4>Advanced Battery Storage</h4>
+            <p>Grid-scale battery storage projects will solve intermittency, enabling 24/7 solar power delivery across India.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2030</span>
+            <h4>500 GW Renewable Target</h4>
+            <p>India aims for 500 GW renewable capacity — solar contributing 300 GW — cutting carbon intensity by 45% from 2005 levels.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2047</span>
+            <h4>Viksit Bharat — Energy Independence</h4>
+            <p>India's vision of becoming a developed nation by 2047, fully energy-independent powered by domestic renewable resources.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Future tech cards -->
+      <div class="future-grid">
+        <div class="future-card reveal">
+          <i class="fas fa-microchip"></i>
+          <h4>Perovskite Solar Cells</h4>
+          <p>Next-gen cells with 30%+ efficiency, promising to revolutionise solar technology by 2030.</p>
+        </div>
+        <div class="future-card reveal">
+          <i class="fas fa-satellite"></i>
+          <h4>Space-Based Solar</h4>
+          <p>ISRO is researching orbital solar panels that beam energy wirelessly to Earth — 24/7, weather-free.</p>
+        </div>
+        <div class="future-card reveal">
+          <i class="fas fa-tint"></i>
+          <h4>Floating Solar (Floatovoltaics)</h4>
+          <p>Solar panels on reservoirs reduce evaporation and generate electricity — India has 18,000+ water bodies suitable for this.</p>
+        </div>
+        <div class="future-card reveal">
+          <i class="fas fa-robot"></i>
+          <h4>AI-Optimised Grids</h4>
+          <p>Artificial intelligence will manage solar grid fluctuations in real time, maximising efficiency and stability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT / FEEDBACK ========== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Contact &amp; Feedback</h2>
+        <p>Share your thoughts or get in touch with us</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Info cards -->
+        <div class="contact-info reveal">
+          <div class="info-card">
+            <i class="fas fa-envelope"></i>
+            <h4>Email Us</h4>
+            <p>solarindia@example.com</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-phone"></i>
+            <h4>Call Us</h4>
+            <p>+91 98765 43210</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>Location</h4>
+            <p>Ahmedabad, Gujarat, India</p>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form reveal">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What's it about?" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+          </div>
+          <button class="btn btn-primary btn-full" onclick="submitForm()">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div id="formMsg" class="form-msg"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <i class="fas fa-sun"></i>
+            <span>SolarIndia</span>
+          </div>
+          <p>Empowering India's renewable energy future through awareness and innovation.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Solar</a></li>
+            <li><a href="#india">Solar in India</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://mnre.gov.in" target="_blank">MNRE India</a></li>
+            <li><a href="https://seia.org" target="_blank">SEIA</a></li>
+            <li><a href="https://isa.int" target="_blank">ISA</a></li>
+            <li><a href="https://nise.res.in" target="_blank">NISE</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SolarIndia Project | Built with <i class="fas fa-heart"></i> for a greener future</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
